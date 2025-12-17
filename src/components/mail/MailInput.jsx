@@ -1,14 +1,12 @@
-import { useState } from 'react';
 import './MailInput.css';
 
 export default function MailInput({ email, setEmail, setError }) {
 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    function checkEmail(email) {
-        if (!emailRegex.test(email)) {
-            setError(true)
-        }
+    function checkEmail() {
+        const isValidEmail = emailRegex.test(email);
+        setError(!isValidEmail);
     }
 
     return (

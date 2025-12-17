@@ -15,7 +15,7 @@ export default function Opinion({ }) {
             <label htmlFor="texte"><TextInitial /></label>
             <input type="text" />
 
-            {!error && <p>`${email} n'est pas valide. Veuillez réessayer.`</p>}
+            {error && <p>{`${email} n'est pas valide. Veuillez réessayer.`}</p>}
 
         </div>
     );
