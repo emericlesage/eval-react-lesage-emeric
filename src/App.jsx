@@ -4,6 +4,7 @@ import Navbar from './layout/Navbar'
 import Home from './pages/home/Home'
 import Movies from './pages/movies/Movies'
 import Movie from './pages/movie/Movie'
+import Opinion from './pages/opinion/opinion'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="movies" element={<Movies />} />
             <Route path="movies/:imdbID" element={<Movie />} />
+            <Route path="opinion" element={<Opinion />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,4 +1,4 @@
-import { Link, Outlet, useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import './Movie.css';
 import { useEffect, useState } from 'react';
 import { ArrowBigLeft } from 'lucide-react';

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './Movies.css';
-import { Outlet } from 'react-router';
 import { Link } from 'react-router';
 
 export default function Movies() {
