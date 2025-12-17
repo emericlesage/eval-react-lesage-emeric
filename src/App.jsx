@@ -13,9 +13,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Navbar />}>
             <Route index element={<Home />} />
-            <Route path="movies" element={<Movies />}>
-              <Route path=":id" element={<Movie />} />
-            </Route>
+            <Route path="movies" element={<Movies />} />
+            <Route path="movies/:imdbID" element={<Movie />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import './Movies.css';
-import { useNavigate } from 'react-router';
+import { Outlet } from 'react-router';
+import { Link } from 'react-router';
 
 export default function Movies() {
     const [movies, setMovies] = useState([]);
-    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -20,14 +20,17 @@ export default function Movies() {
     return (
         <div className="movies-container">
             {movies.map((movie) => (
-                <div key={movie.imdbID} className="movie-card" onClick={ }>
-                    <img src={movie.Poster} alt={movie.Title} />
-                    <div className="movie-title">
-                        {movie.Title}
+                <Link to={`/movies/${movie.imdbID}`} key={movie.imdbID}>
+                    <div className="movie-card" >
+                        <img src={movie.Poster} alt={movie.Title} />
+                        <div className="movie-title movie-button">
+                            {movie.Title}
+                        </div>
                     </div>
-                </div>
-            ))}
-        </div>
+                </Link>
+            ))
+            }
+        </div >
 
     );
 }   
